@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    float currentSpeed;
+    /*float currentSpeed;
     float maxSpeed;
 
     float movementRate = 0.1f;
@@ -48,6 +48,34 @@ public class PlayerController : MonoBehaviour
 
         //Vector3 dragForce = -change * dragCoefficient;
         //transform.position += dragForce;
+    }*/
+
+    public GameObject explosion;
+
+    Rigidbody2D rb;
+
+    public float thrustPower;
+    float maxSpeed = 10.0f;
+
+    private void Start()
+    {
+        rb = GetComponent<Rigidbody2D>();
+    }
+
+    private void Update()
+    {
+        Thrust();
+
+        Rotation();
+    }
+
+    void Thrust()
+    {
+        if (Input.GetKey(KeyCode.W))
+        {
+            rb.AddForce(transform.up * thrustPower);
+            rb.velocity = Vector3.ClampMagnitude(rb.velocity, maxSpeed);
+        }
     }
 
     void Rotation()
@@ -59,6 +87,17 @@ public class PlayerController : MonoBehaviour
         else if (Input.GetKey(KeyCode.D))
         {
             transform.Rotate(0f, 0f, -150f * Time.deltaTime, Space.Self);
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collider)
+    {
+        if (collider.transform.CompareTag("Asteroid"))
+        {
+
+            GameObject.Instantiate(explosion, transform.position, Quaternion.identity);
+
+            Destroy(gameObject);
         }
     }
 }
