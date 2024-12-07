@@ -23,4 +23,9 @@ public class PlayerShoot : MonoBehaviour
             Destroy(collider.gameObject);
         }
     }
+
+    void Update()
+    {
+        Destroy(gameObject, 2);
+    }
 }
