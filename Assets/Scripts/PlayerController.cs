@@ -54,6 +54,7 @@ public class PlayerController : MonoBehaviour
     public GameObject bullet;
 
     Rigidbody2D rb;
+    AudioManager audioManager;
 
     public float thrustPower;
     float maxSpeed = 10.0f;
@@ -62,6 +63,7 @@ public class PlayerController : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         GetComponent<PlayerShoot>();
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
     }
 
     private void Update()
@@ -74,6 +76,7 @@ public class PlayerController : MonoBehaviour
         {
             Vector3 shootingposition = transform.position + transform.up;
             Instantiate(bullet, shootingposition, transform.rotation);
+            audioManager.PlaySFX(audioManager.fire);
         }
     }
 
@@ -83,6 +86,7 @@ public class PlayerController : MonoBehaviour
         {
             rb.AddForce(transform.up * thrustPower);
             rb.velocity = Vector3.ClampMagnitude(rb.velocity, maxSpeed);
+          
         }
     }
 
@@ -105,7 +109,7 @@ public class PlayerController : MonoBehaviour
         {
 
             GameObject.Instantiate(explosion, transform.position, Quaternion.identity);
-
+            audioManager.PlaySFX(audioManager.explode);
             Destroy(gameObject);
         }
     }
