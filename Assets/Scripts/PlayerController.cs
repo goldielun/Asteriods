@@ -51,6 +51,7 @@ public class PlayerController : MonoBehaviour
     }*/
 
     public GameObject explosion;
+    public GameObject bullet;
 
     Rigidbody2D rb;
 
@@ -60,6 +61,7 @@ public class PlayerController : MonoBehaviour
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        GetComponent<PlayerShoot>();
     }
 
     private void Update()
@@ -67,6 +69,12 @@ public class PlayerController : MonoBehaviour
         Thrust();
 
         Rotation();
+
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            Vector3 shootingposition = transform.position + transform.up;
+            Instantiate(bullet, shootingposition, transform.rotation);
+        }
     }
 
     void Thrust()
@@ -89,6 +97,7 @@ public class PlayerController : MonoBehaviour
             transform.Rotate(0f, 0f, -150f * Time.deltaTime, Space.Self);
         }
     }
+
 
     private void OnTriggerEnter2D(Collider2D collider)
     {
