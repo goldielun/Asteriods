@@ -6,6 +6,8 @@ public class PlayerShoot : MonoBehaviour
 
     private Rigidbody2D rb;
 
+    public GameObject explosion;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -16,8 +18,9 @@ public class PlayerShoot : MonoBehaviour
     {
         if (collider.CompareTag("Asteroid"))
         {
-            // Instantiate explosion or apply damage here
+            GameObject.Instantiate(explosion, transform.position, Quaternion.identity);
             Destroy(gameObject); // Destroy bullet on collision
+            Destroy(collider.gameObject);
         }
     }
 }
