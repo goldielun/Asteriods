@@ -11,7 +11,7 @@ public class PlayerShoot : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        rb.velocity = transform.up * speed; // Move the bullet in the direction it's facing (up in 2D)
+        rb.velocity = transform.up * speed; 
     }
 
     private void OnTriggerEnter2D(Collider2D collider)
@@ -19,7 +19,7 @@ public class PlayerShoot : MonoBehaviour
         if (collider.CompareTag("Asteroid"))
         {
             GameObject.Instantiate(explosion, transform.position, Quaternion.identity);
-            Destroy(gameObject); // Destroy bullet on collision
+            Destroy(gameObject); 
             Destroy(collider.gameObject);
         }
     }
