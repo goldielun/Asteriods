@@ -27,7 +27,7 @@ public class yauseMenu : MonoBehaviour
         PauseMenu.SetActive(true); // Activate the target object
         isPaused = true; // Set pause state to true
     }
-    private void ResumeGame()
+    public void ResumeGame()
     {
         Time.timeScale = 1; // Resume the game
         PauseMenu.SetActive(false); // Deactivate the target object
