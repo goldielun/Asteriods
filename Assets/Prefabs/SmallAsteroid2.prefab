@@ -11,6 +11,10 @@ GameObject:
   - component: {fileID: 7604676963164850693}
   - component: {fileID: 6678203826763567587}
   - component: {fileID: 5703671534714839369}
+  - component: {fileID: 8613836223639687065}
+  - component: {fileID: 4969515311742304850}
+  - component: {fileID: 8025471556586124304}
+  - component: {fileID: 6613073029199516313}
   m_Layer: 0
   m_Name: SmallAsteroid2
   m_TagString: Asteroid
@@ -163,3 +167,67 @@ PolygonCollider2D:
       - {x: 0.31023693, y: 0.002923131}
       - {x: 0.28616244, y: 0.031162076}
   m_UseDelaunayMesh: 0
+--- !u!114 &8613836223639687065
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5562396928450621398}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1053eb0697f96ee4ba07d9d22f55e657, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  explosion: {fileID: 2694459572339537102, guid: 257203e45e99c5b4eacb68a36f7a6c53, type: 3}
+--- !u!114 &4969515311742304850
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5562396928450621398}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 583960d8327a2b34db1d761f8280da33, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &8025471556586124304
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5562396928450621398}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8464d9cbce56f95469b2e73028a732d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!50 &6613073029199516313
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5562396928450621398}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0

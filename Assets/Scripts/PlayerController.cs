@@ -74,8 +74,8 @@ public class PlayerController : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            Vector3 shootingposition = transform.position + transform.up;
-            Instantiate(bullet, shootingposition, transform.rotation);
+            //Vector3 shootingposition = transform.position + transform.up;
+            Instantiate(bullet, transform.position, transform.rotation);
             audioManager.PlaySFX(audioManager.fire);
         }
     }

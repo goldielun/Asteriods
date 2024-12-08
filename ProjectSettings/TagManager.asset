@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Asteroid
   - Audio
+  - Laser
   layers:
   - Default
   - TransparentFX

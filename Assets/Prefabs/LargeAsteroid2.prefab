@@ -11,6 +11,10 @@ GameObject:
   - component: {fileID: 7064614855946870048}
   - component: {fileID: 2419940807616755661}
   - component: {fileID: 7036104923821249839}
+  - component: {fileID: 1287198886791515824}
+  - component: {fileID: 6164065755223202269}
+  - component: {fileID: 1930041580341753697}
+  - component: {fileID: 7119691308184023152}
   m_Layer: 0
   m_Name: LargeAsteroid2
   m_TagString: Asteroid
@@ -163,3 +167,68 @@ PolygonCollider2D:
       - {x: 0.31023693, y: 0.002923131}
       - {x: 0.28616244, y: 0.031162076}
   m_UseDelaunayMesh: 0
+--- !u!114 &1287198886791515824
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8563747287186017412}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf2efab4c09b897439143a9434789cac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  explosion: {fileID: 2694459572339537102, guid: 257203e45e99c5b4eacb68a36f7a6c53, type: 3}
+  mediumAsteroid2: {fileID: 2514232556905939976, guid: 2caaf4ce1a79f0f41bc47da61c96ea99, type: 3}
+--- !u!114 &6164065755223202269
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8563747287186017412}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 583960d8327a2b34db1d761f8280da33, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1930041580341753697
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8563747287186017412}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8464d9cbce56f95469b2e73028a732d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!50 &7119691308184023152
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8563747287186017412}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
