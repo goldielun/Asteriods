@@ -225,6 +225,7 @@ MonoBehaviour:
   Engines: {fileID: 8300000, guid: 7ae24941798223f49985d51658a65532, type: 3}
   fire: {fileID: 8300000, guid: 2cd7e1faca9d3a04cb4c6582476ff4d3, type: 3}
   teleport: {fileID: 8300000, guid: 71e68112be3d6e1498e8a8026a40666b, type: 3}
+  thrusting: {fileID: 8300000, guid: 7ae24941798223f49985d51658a65532, type: 3}
 --- !u!4 &453097739
 Transform:
   m_ObjectHideFlags: 0
