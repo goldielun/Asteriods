@@ -84,7 +84,7 @@ public class PlayerController : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.W))
         {
-            audioManager.PlaySFX(audioManager.Engines);
+            //audioManager.PlaySFX(audioManager.Engines);
             rb.AddForce(transform.up * thrustPower);
             rb.velocity = Vector3.ClampMagnitude(rb.velocity, maxSpeed);
           
