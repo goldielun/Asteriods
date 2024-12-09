@@ -1,6 +1,7 @@
 using UnityEngine;
 
-public class AudioManager : MonoBehaviour
+public class titleaudio : MonoBehaviour
+
 {
     [SerializeField] AudioSource musicSource;
     [SerializeField] AudioSource SFXSource;
@@ -14,7 +15,7 @@ public class AudioManager : MonoBehaviour
 
     private void Start()
     {
-        musicSource.clip = background;
+        musicSource.clip = titlemusic;
         musicSource.Play();
     }
 
